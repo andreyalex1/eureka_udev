@@ -1,6 +1,9 @@
 SUBSYSTEM=="tty", KERNEL=="ttyACM*", ATTRS{product}=="EUREKA_DC_LEFT", SYMLINK+="dc_left", MODE="0666"
 SUBSYSTEM=="tty", KERNEL=="ttyACM*", ATTRS{product}=="EUREKA_DC_RIGHT", SYMLINK+="dc_right", MODE="0666"
 SUBSYSTEM=="tty", KERNEL=="ttyACM*", ATTRS{product}=="EUREKA_ARM", SYMLINK+="arm", MODE="0666"
+
+SUBSYSTEM=="tty", KERNEL=="ttyUSB*", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", SYMLINK+="wt901", MODE="0666"
+
 SUBSYSTEM=="video4linux", KERNEL=="video*", ATTRS{devpath}=="2.4.3", ATTR{index}=="0", SYMLINK+="topdowncam"
 SUBSYSTEM=="video4linux", KERNEL=="video*", ATTRS{devpath}=="2.4.2", ATTR{index}=="0", SYMLINK+="pancam"
 SUBSYSTEM=="video4linux", KERNEL=="video*", ATTRS{devpath}=="2.4.4", ATTR{index}=="0", SYMLINK+="hazcam"
